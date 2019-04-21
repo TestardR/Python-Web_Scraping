@@ -201,5 +201,38 @@ html_doc = """
 soup = BeautifulSoup(html_doc, 'html.parser')
 
 # Direct
+# print(soup.body)
+# print(soup.head)
+# print(soup.head.title)
 
-print(soup.body)
+# find() // only the first one
+# el = soup.find('div')
+
+# find_all() or findAll()
+# el = soup.find_all('div')
+# el = soup.find_all('div')[1]
+
+
+# el = soup.find(id='description_title')
+# el = soup.find_all(id='description_title')
+# el = soup.find_all(class_='description_head')
+# el = soup.find(attrs={"data-hello": "hi"})
+
+# select
+# el = soup.select('#description_title')
+# el = soup.select('#description_title')[0]
+# el = soup.select('.description_head')
+
+# get_text()
+# el = soup.find(class_='description_head').get_text()
+
+# for item in soup.select('.description_head'):
+#     print(item.get_text())
+
+# Navigation
+# el = soup.body.contents
+# el = soup.body.contents[1].contents[1].contents[1]
+# el = soup.body.contents[1].find_next_sibling()
+# el = soup.find(class_="item").find_parent()
+
+print(el)
